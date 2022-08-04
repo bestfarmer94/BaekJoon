@@ -3,7 +3,7 @@ package level4;
 import java.io.*;
 import java.util.StringTokenizer;
 
-public class Main {
+public class Q4344 {
 
 	public static void main(String[] args) throws Exception {
 		
@@ -37,6 +37,8 @@ public class Main {
 			
 			System.out.printf("%.3f", (double)count/m*100);
 			System.out.println("%");
+//			System.out.printf("%.3f%%\n", (double)count/m*100); %%가 %로 출력된다.
+//			System.out.println(String.format("%.3f", (double)count/m*100));
 		}
 		
 		br.close();
