@@ -8,22 +8,21 @@ public class Main {
 	public static void main(String[] args) throws IOException {
 		
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-		StringTokenizer st;
-		String str;
-		int a,b = 0;
+		StringBuilder sb = new StringBuilder();
 		
-		while((str=br.readLine()) != null) {
-			st = new StringTokenizer(str);
-			a = Integer.parseInt(st.nextToken());
-			b = Integer.parseInt(st.nextToken());
-			
-			bw.write((a+b) + "\n");
+		int x = Integer.parseInt(br.readLine());
+		int n = Integer.parseInt(br.readLine());
+
+		for(int i=0; i<n; i++) {
+			StringTokenizer st = new StringTokenizer(br.readLine());
+			int a = Integer.parseInt(st.nextToken());
+			int b = Integer.parseInt(st.nextToken());
+			x -= a*b;
 		}
 		
-		br.close();
-		bw.flush();
+		sb.append(x == 0 ? "Yes" : "No");
+		System.out.println(sb);
 		
+		br.close();
 	}
-
 }
